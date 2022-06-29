@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower" rel="stylesheet">
+    <title>Juego del Ahorcado</title>
+</head>
+
+<body>
+    <div class="blackboard">
+        <header>
+            <img src="images/oracle+alura-logo.svg">
+            <h1>EL AHORCADO</h1>
+        </header>
+        <main>
+            <section class="screens" id="screen1">
+                <p>Instrucciones: Haz click en "empezar", luego teclea una letra y descubre si forma parte de la palabra secreta.</p>
+                <div class="buttons-box">
+                    <button type="button" class="buttons" id="start-game">Empezar</button>
+                    <button type="button" class="buttons" id="add-word"> Añadir palabra</button>
+                </div>
+            </section>
+            <section class="screens" id="screen2" style="display:none">
+                <input type="text" placeholder="Ingrese una palabra" class="word-field" id="word-field" maxlength="8" required>
+                <p>*Máximo 8 letras. Solo letras y sin carácteres especiales</p>
+                <div class="buttons-box">
+                    <input type="submit" value="Añadir" class="buttons" id="submit-word">
+                    <button type="button" class="buttons" id="cancel">Cancelar</button>
+                </div>
+            </section>
+            <section class="screens" id="screen3" style="display:none">
+                <canvas id="ahorcado" width="250" height="230"></canvas>
+                <p id="message"></p>
+                <div id="letters-box" class="letters-box correct-letter"></div>
+                <div id="incorrectLetters-box" class="letters-box incorrect-letter"></div>
+                <div class="buttons-box">
+                    <button type="button" class="buttons" id="new-game">Nuevo juego</button>
+                    <button type="button" class="buttons" id="desist-game">Desistir</button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <a href="https://www.linkedin.com/in/idania-de-jes%C3%BAs-guerrero-fonseca-a74b23138/" target="_blank"><img class="contact-logos" src="images/linkedin-logo.png"></a>
+            <a href="https://github.com/IdaniaGF" target="_blank"><img class="contact-logos" src="images/github-logo.png"></a>
+        </footer>
+    </div>
+    <script src="js/startGame.js"></script>
+    <script src="js/guessLetter.js"></script>
+    <script src="js/drawAhorcado.js"></script>
+    <script src="js/cancelGame.js"></script>
+    <script src="js/addWord.js"></script>
+
+</body>
+
+</html>
